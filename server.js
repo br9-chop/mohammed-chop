@@ -19,8 +19,8 @@ const upload=multer({
 app.use(express.static(path.join(__dirname,"public")));
 
 app.post("/api/order",upload.single("file"),async(req,res)=>{
-  const {name,discord,service,details}=req.body||{};
-  if(!name||!discord||!service||!details)
+  const {name,discord,service,details,payment}=req.body||{};
+  if(!name||!discord||!service||!details||!payment)
     return res.status(400).json({message:"❌ Remplis tous les champs."});
   if(!WEBHOOK_URL)
     return res.status(500).json({message:"❌ Discord Webhook non configuré."});
@@ -29,7 +29,8 @@ app.post("/api/order",upload.single("file"),async(req,res)=>{
     {name:"👤 Nom",value:String(name).slice(0,100),inline:true},
     {name:"💬 Discord",value:String(discord).slice(0,100),inline:true},
     {name:"🛠️ Service",value:String(service).slice(0,100)},
-    {name:"📝 Détails",value:String(details).slice(0,1000)}
+    {name:"📝 Détails",value:String(details).slice(0,1000)},
+    {name:"💳 Paiement",value:String(payment).slice(0,100),inline:true}
   ];
   if(req.file) fields.push({name:"📎 Fichier",value:`${req.file.originalname} (${Math.round(req.file.size/1024)} KB)`});
 
