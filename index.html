@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mohammed Chop — Montage & Design</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070707;color:#fff;font-family:Arial,sans-serif}
+header{height:64px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #222;position:sticky;top:0;background:#070707ed;backdrop-filter:blur(10px);z-index:5}
+.logo{font-weight:900;font-size:20px}.logo span,h1 span,.price{color:#8b5cf6}nav a{color:#bbb;text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:#fff}
+.hero{text-align:center;padding:110px 20px 95px;background:radial-gradient(circle at 50% 10%,#351064,#070707 58%)}h1{font-size:clamp(42px,7vw,78px);margin:0 0 15px}.hero p{color:#aaa;font-size:18px}.btn{display:inline-block;margin-top:22px;padding:14px 25px;border-radius:10px;background:#8b5cf6;color:white;text-decoration:none;font-weight:800}
+section{padding:75px 7%}.title{text-align:center;margin-bottom:40px}.title h2{font-size:32px;margin:0 0 8px}.title p{color:#888}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#101010;border:1px solid #242424;border-radius:16px;padding:24px}.card:hover{border-color:#8b5cf6;transform:translateY(-2px)}.card{transition:.2s}.icon{font-size:32px}.card p{color:#999;line-height:1.5}
+.work{height:180px;border-radius:12px;background:linear-gradient(135deg,#171717,#28104c);display:flex;align-items:center;justify-content:center;font-size:38px;margin-bottom:15px}.work small{font-size:13px;color:#bbb}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pricebox{background:#101010;border:1px solid #292929;border-radius:16px;padding:25px}.pricebox.featured{border-color:#8b5cf6}.price{font-size:30px;font-weight:900}.pricebox ul{padding-left:18px;color:#aaa;line-height:2}
+.formbox{max-width:800px;margin:auto;background:#101010;border:1px solid #242424;border-radius:18px;padding:28px}.group{margin-bottom:17px}label{display:block;font-weight:bold;margin-bottom:7px}input,select,textarea{width:100%;padding:13px;border-radius:9px;border:1px solid #2b2b2b;background:#080808;color:#fff}textarea{min-height:120px;resize:vertical}input[type=file]{padding:10px}
+button{width:100%;padding:14px;border:0;border-radius:9px;background:#8b5cf6;color:#fff;font-weight:800;cursor:pointer}button:disabled{opacity:.6;cursor:wait}#msg{display:none;margin-top:15px;padding:12px;border-radius:9px;text-align:center}
+footer{text-align:center;padding:30px;color:#666;border-top:1px solid #222}
+@media(max-width:800px){.grid,.prices{grid-template-columns:1fr}nav{display:none}section{padding:55px 5%}}
+</style>
+</head>
+<body>
+<header><div class="logo">MOHAMMED <span>CHOP</span></div><nav><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#prices">Prix</a><a href="#order">Commander</a></nav></header>
+
+<section class="hero"><h1>MOHAMMED <span>CHOP</span></h1><p>Montage vidéo • Thumbnails • Design Gaming</p><a class="btn" href="#order">Commander maintenant 🚀</a></section>
+
+<section id="services"><div class="title"><h2>Services</h2><p>Tout ce qu'il faut pour ton contenu.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🎬</div><h3>Montage Vidéo</h3><p>YouTube, Shorts, TikTok et Gaming avec cuts, transitions et effets.</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Thumbnail</h3><p>Miniatures propres et adaptées à YouTube.</p></div>
+<div class="card"><div class="icon">🎨</div><h3>Design</h3><p>Banners, visuels et designs pour tes projets gaming.</p></div>
+</div></section>
+
+<section id="portfolio"><div class="title"><h2>Portfolio</h2><p>Quelques exemples de catégories de travaux.</p></div>
+<div class="grid">
+<div class="card"><div class="work">🎬</div><h3>Gaming Montage</h3><p>Montage dynamique pour gameplay.</p></div>
+<div class="card"><div class="work">🖼️</div><h3>YouTube Thumbnail</h3><p>Visuel accrocheur pour vidéo.</p></div>
+<div class="card"><div class="work">🎨</div><h3>Discord / Gaming Design</h3><p>Design pour serveur et communauté.</p></div>
+</div></section>
+
+<section id="prices"><div class="title"><h2>Prix</h2><p>Tarifs de départ — à confirmer selon la demande.</p></div>
+<div class="prices">
+<div class="pricebox"><h3>Thumbnail</h3><div class="price">à partir de 20 DH</div><ul><li>1 miniature</li><li>Format YouTube</li><li>1 révision</li></ul></div>
+<div class="pricebox featured"><h3>Short / TikTok</h3><div class="price">à partir de 40 DH</div><ul><li>Montage vertical</li><li>Cuts + effets</li><li>1 révision</li></ul></div>
+<div class="pricebox"><h3>Vidéo YouTube</h3><div class="price">à partir de 80 DH</div><ul><li>Montage complet</li><li>Effets / transitions</li><li>Révisions selon projet</li></ul></div>
+</div></section>
+
+<section id="order"><div class="title"><h2>Commander</h2><p>Envoie les détails et ton fichier. La demande arrive sur Discord.</p></div>
+<div class="formbox"><form id="form" enctype="multipart/form-data">
+<div class="group"><label>Ton nom</label><input name="name" required placeholder="Mohammed"></div>
+<div class="group"><label>Discord</label><input name="discord" required placeholder="tonpseudo"></div>
+<div class="group"><label>Service</label><select name="service" required><option value="">Choisir...</option><option>🎬 Montage Vidéo</option><option>🖼️ Thumbnail</option><option>🎨 Design</option><option>⚡ Autre</option></select></div>
+<div class="group"><label>Détails</label><textarea name="details" required placeholder="Explique ce que tu veux..."></textarea></div>
+<div class="group"><label>Fichier (image / vidéo)</label><input name="file" type="file" accept="image/*,video/*"></div>
+<button id="submit" type="submit">Envoyer la commande 🚀</button><div id="msg"></div>
+</form></div></section>
+<footer>© 2026 Mohammed Chop</footer>
+<script>
+const form=document.getElementById("form"),btn=document.getElementById("submit"),msg=document.getElementById("msg");
+form.addEventListener("submit",async e=>{
+ e.preventDefault(); btn.disabled=true; btn.textContent="Envoi...";
+ try{
+  const r=await fetch("/api/order",{method:"POST",body:new FormData(form)});
+  const j=await r.json(); msg.style.display="block"; msg.textContent=j.message||"Terminé";
+  msg.style.background=r.ok?"#102617":"#351414"; msg.style.color=r.ok?"#72e39a":"#ff9b9b";
+  if(r.ok)form.reset();
+ }catch(err){msg.style.display="block";msg.style.background="#351414";msg.style.color="#ff9b9b";msg.textContent="❌ Erreur de connexion."}
+ btn.disabled=false;btn.textContent="Envoyer la commande 🚀";
+});
+</script>
+</body></html>
