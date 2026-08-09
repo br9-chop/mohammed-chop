@@ -25,3 +25,6 @@ http://localhost:3000
 - إرسال الطلب والملف مباشرة إلى Discord Webhook
 
 ملاحظة: 8 MB حد عملي لهذه النسخة. للملفات الكبيرة (خصوصا فيديوهات طويلة) الأفضل استعمال تخزين ملفات/رابط رفع منفصل.
+
+
+Payment options: Money and Credit. Prices display both payment labels.
